@@ -53,7 +53,7 @@ ol {
 .search-form {
 	display: flex;
 	align-items: end;
-	margin-top: 22px;
+	margin-top: 16px;
 	gap: 40px;
 	height: 54px;
 }
@@ -67,7 +67,7 @@ ol {
 
 .content__list {
 	position: relative;
-	margin-top: 26px;
+	margin-top: 22px;
 	height: 298px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -265,16 +265,18 @@ label + input[type='checkbox'] {
 /* Состояния поля ввода */
 .search-form__textfield:focus {
 	outline: none;
-	box-shadow: none;
 }
 
-.search-form__fieldset .search-form__label:has(:focus-visible) {
-	outline: 1px solid black;
-	box-shadow: 0 0 0 2px white;
+.search-form__label:has(.search-form__textfield:focus-visible) {
+	outline: 1px solid white;
+	outline-offset: 1px;
 }
 
-.search-form__textfield:active {
-	outline: 1px solid #fff;
+.search-form__label:has(.search-form__textfield:active) {
+	outline: none;
+	border-width: 0px 1px 0px 1px;
+	border-style: solid;
+	border-color: #ffffff;
 }
 
 /* Состояния чекбоксов */
@@ -287,9 +289,9 @@ label + input[type='checkbox'] {
 	margin: 1px;
 }
 
-.search-form__checkbox-list .search-form__label:has(:focus-visible) {
-	outline: 1px solid black;
-	box-shadow: 0 0 0 2px white;
+.search-form__label:has(.search-form__checkbox:focus-visible) {
+	outline: 1px solid white;
+	outline-offset: 1px;
 }
 
 .search-form__label:hover {
@@ -315,8 +317,8 @@ label + input[type='checkbox'] {
 }
 
 .button:focus-visible {
-	outline: 1px solid black;
-	box-shadow: 0 0 0 2px white;
+	outline: 1px solid white;
+	outline-offset: 1px;
 }
 
 /* Состояния карточек списка */
