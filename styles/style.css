@@ -53,14 +53,15 @@ ol {
 .search-form {
 	display: flex;
 	align-items: end;
-	margin-top: 18px;
+	margin-top: 22px;
 	gap: 40px;
+	height: 54px;
 }
 
 .result__video-container {
 	width: 711px;
 	height: 386px;
-	margin-top: 78px;
+	margin-top: 72px;
 	position: relative;
 }
 
@@ -147,12 +148,17 @@ ol {
 	overflow: hidden;
 }
 
+.search-form__checkbox-list {
+	margin-bottom: 5px;
+}
+
 .search-form__fieldset-title {
 	font-family: Fira Sans Condensed, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 21.6px;
 	text-align: left;
+	margin-bottom: 5px;
 }
 
 .content__card-link {
@@ -201,6 +207,7 @@ ol {
 	border-width: 1px 0px 1px 0px;
 	border-style: solid;
 	border-color: #ffffff;
+	outline: none;
 	font-family: inherit;
 	font-size: 18px;
 	font-weight: 400;
@@ -256,18 +263,21 @@ label + input[type='checkbox'] {
 }
 
 /* Состояния поля ввода */
-
-label {
-	outline: 1px solid black;
-	box-shadow: 0 0 0 2px white;
-}
-
-/* Состояния чекбоксов */
-.search-form__label:focus {
+.search-form__textfield:focus {
 	outline: none;
 	box-shadow: none;
 }
 
+.search-form__fieldset .search-form__label:has(:focus-visible) {
+	outline: 1px solid black;
+	box-shadow: 0 0 0 2px white;
+}
+
+.search-form__textfield:active {
+	outline: 1px solid #fff;
+}
+
+/* Состояния чекбоксов */
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
 	content: '';
 	display: block;
@@ -277,7 +287,7 @@ label {
 	margin: 1px;
 }
 
-.search-form__label:has(:focus-visible) {
+.search-form__checkbox-list .search-form__label:has(:focus-visible) {
 	outline: 1px solid black;
 	box-shadow: 0 0 0 2px white;
 }
