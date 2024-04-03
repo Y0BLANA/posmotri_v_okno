@@ -55,7 +55,6 @@ ol {
 	align-items: end;
 	margin-top: 16px;
 	gap: 40px;
-	height: 54px;
 }
 
 .result__video-container {
@@ -71,7 +70,6 @@ ol {
 	height: 298px;
 	overflow-y: auto;
 	overflow-x: hidden;
-	/* overflow: hidden; */
 }
 
 .title {
@@ -141,7 +139,7 @@ ol {
 }
 
 .content__video-card-description-container {
-	width: 200px;
+	max-width: 200px;
 	flex-grow: 1;
 	text-overflow: ellipsis;
 	white-space: nowrap;
